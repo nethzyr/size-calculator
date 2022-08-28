@@ -57,7 +57,7 @@ const CategorySelector: Component<{
   };
 
   return (
-    <div class="relative flex flex-col mx-auto w-80">
+    <div class="relative mx-auto flex w-80 flex-col">
       <InputGroup>
         <Input
           id="category-selector"
@@ -73,7 +73,7 @@ const CategorySelector: Component<{
         </InputRightElement>
       </InputGroup>
       <Show when={focused()}>
-        <div class="absolute bg-white flex top-[42px] w-full flex-col z-10 border">
+        <div class="absolute top-[42px] z-10 flex w-full flex-col border bg-white">
           <Show
             when={!data.loading}
             fallback={
@@ -85,7 +85,7 @@ const CategorySelector: Component<{
             <For each={data()?.categories} fallback={<div>No results</div>}>
               {(item, index) => (
                 <button
-                  class={`hover:cursor-pointer hover:bg-gray-200 p-1 text-sm ${
+                  class={`p-1 text-sm hover:cursor-pointer hover:bg-gray-200 ${
                     selectedIndex() === index() && "bg-gray-200"
                   }`}
                   onClick={() => {

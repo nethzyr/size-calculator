@@ -53,7 +53,7 @@ const Result: Component = () => {
       </div>
       <div class="p-4"></div>
       <div class="flex justify-center">
-        <Button class="bg-violet-700 w-40" onClick={() => navigate("/")}>
+        <Button class="w-40 bg-violet-700" onClick={() => navigate("/")}>
           OK
         </Button>
       </div>

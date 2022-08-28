@@ -7,7 +7,7 @@ const SizeInput: Component<{
   navigateToResultPage: () => void;
 }> = ({ size, setSize, navigateToResultPage }) => {
   return (
-    <div class="flex justify-center items-center gap-1">
+    <div class="flex items-center justify-center gap-1">
       <span>My size is</span>
       <Input
         id="size-input"

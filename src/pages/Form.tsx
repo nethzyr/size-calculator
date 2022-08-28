@@ -26,7 +26,7 @@ const Form: Component = () => {
       <div class="p-1"></div>
       <div class="flex justify-center">
         <Button
-          class="bg-violet-700 w-40"
+          class="w-40 bg-violet-700"
           disabled={!brand() || !category() || !size()}
           onClick={navigateToResultPage}
         >

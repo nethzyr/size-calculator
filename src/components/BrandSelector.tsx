@@ -79,7 +79,7 @@ const BrandSelector: Component<{ setBrand: Setter<string> }> = ({
   };
 
   return (
-    <div class="relative flex flex-col mx-auto w-80">
+    <div class="relative mx-auto flex w-80 flex-col">
       <InputGroup>
         <Input
           placeholder="Select a brand"
@@ -100,7 +100,7 @@ const BrandSelector: Component<{ setBrand: Setter<string> }> = ({
         </InputRightElement>
       </InputGroup>
       <Show when={focused()}>
-        <div class="absolute bg-white flex top-[42px] w-full flex-col z-10 border">
+        <div class="absolute top-[42px] z-10 flex w-full flex-col border bg-white">
           <Show
             when={!data.loading}
             fallback={
@@ -112,7 +112,7 @@ const BrandSelector: Component<{ setBrand: Setter<string> }> = ({
             <For each={data()?.brands} fallback={<div>No results</div>}>
               {(item, index) => (
                 <button
-                  class={`hover:cursor-pointer hover:bg-gray-200 p-1 text-sm ${
+                  class={`p-1 text-sm hover:cursor-pointer hover:bg-gray-200 ${
                     selectedIndex() === index() && "bg-gray-200"
                   }`}
                   onClick={() => {
@@ -126,7 +126,7 @@ const BrandSelector: Component<{ setBrand: Setter<string> }> = ({
             </For>
           </Show>
           <Show when={data()?.next}>
-            <div class="text-gray-400 text-xs text-center p-1">
+            <div class="p-1 text-center text-xs text-gray-400">
               Press <Kbd>CTRL</Kbd> + <Kbd>K</Kbd> to load next page
             </div>
           </Show>
